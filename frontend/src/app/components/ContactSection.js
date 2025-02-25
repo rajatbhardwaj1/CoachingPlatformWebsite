@@ -1,0 +1,122 @@
+'use client';
+
+import { useState } from 'react';
+import { FaMapMarkerAlt, FaEnvelope, FaPhone } from 'react-icons/fa';
+
+const ContactSection = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    course: '',
+    message: '',
+  });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    alert('Thank you for your message. We will get back to you soon!');
+    setFormData({ name: '', email: '', phone: '', course: '', message: '' });
+  };
+
+  return (
+    <section id="contact" className="py-24 bg-neutral-900">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold text-white mb-4">Contact Us</h2>
+          <div className="h-1 w-20 bg-yellow-500 mx-auto"></div>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div className="bg-neutral-800 p-8 rounded-lg shadow-lg">
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div>
+                <label className="block text-sm font-medium text-gray-300">Full Name</label>
+                <input type="text" name="name" value={formData.name} onChange={handleChange} required className="mt-1 block w-full rounded-md bg-neutral-700 border-transparent focus:border-yellow-500 focus:ring-yellow-500 text-white px-4 py-2" />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-300">Email Address</label>
+                <input type="email" name="email" value={formData.email} onChange={handleChange} required className="mt-1 block w-full rounded-md bg-neutral-700 border-transparent focus:border-yellow-500 focus:ring-yellow-500 text-white px-4 py-2" />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-300">Phone Number</label>
+                <input type="tel" name="phone" value={formData.phone} onChange={handleChange} required className="mt-1 block w-full rounded-md bg-neutral-700 border-transparent focus:border-yellow-500 focus:ring-yellow-500 text-white px-4 py-2" />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-300">Interested Course</label>
+                <select name="course" value={formData.course} onChange={handleChange} required className="mt-1 block w-full rounded-md bg-neutral-700 border-transparent focus:border-yellow-500 focus:ring-yellow-500 text-white px-4 py-2">
+                  <option value="">Select a course</option>
+                  <option value="jee">JEE Physics</option>
+                  <option value="neet">NEET Physics</option>
+                  <option value="boards">Board Exams</option>
+                </select>
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-300">Message</label>
+                <textarea name="message" rows="4" value={formData.message} onChange={handleChange} className="mt-1 block w-full rounded-md bg-neutral-700 border-transparent focus:border-yellow-500 focus:ring-yellow-500 text-white px-4 py-2"></textarea>
+              </div>
+              <button type="submit" className="w-full bg-yellow-500 text-neutral-900 px-6 py-3 rounded-md font-semibold hover:bg-yellow-400 transition-all duration-300">
+                Send Message
+              </button>
+            </form>
+          </div>
+
+          <div className="space-y-8">
+            <div className="bg-neutral-800 p-8 rounded-lg shadow-lg">
+              <h3 className="text-2xl font-bold text-white mb-6">Get in Touch</h3>
+              <div className="space-y-6">
+                <div className="flex items-start">
+                  <FaMapMarkerAlt className="h-6 w-6 text-yellow-500" />
+                  <div className="ml-4">
+                    <p className="text-white font-medium">Address</p>
+                    <p className="text-gray-300">123 Education Street, Learning City, 12345</p>
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <FaEnvelope className="h-6 w-6 text-yellow-500" />
+                  <div className="ml-4">
+                    <p className="text-white font-medium">Email</p>
+                    <a href="mailto:info@kumarphysics.com" className="text-gray-300 hover:text-yellow-500">info@kumarphysics.com</a>
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <FaPhone className="h-6 w-6 text-yellow-500" />
+                  <div className="ml-4">
+                    <p className="text-white font-medium">Phone</p>
+                    <a href="tel:+1234567890" className="text-gray-300 hover:text-yellow-500">+1 (234) 567-890</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="bg-neutral-800 p-8 rounded-lg shadow-lg">
+              <h3 className="text-2xl font-bold text-white mb-6">Working Hours</h3>
+              <div className="space-y-3">
+                <div className="flex justify-between">
+                  <span className="text-gray-300">Monday - Friday</span>
+                  <span className="text-white">9:00 AM - 6:00 PM</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-gray-300">Saturday</span>
+                  <span className="text-white">9:00 AM - 3:00 PM</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-gray-300">Sunday</span>
+                  <span className="text-white">Closed</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default ContactSection;
+
+
+
+
