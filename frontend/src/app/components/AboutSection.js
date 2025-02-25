@@ -34,7 +34,7 @@ const AboutSection = () => {
                     d="M5 13l4 4L19 7"
                   ></path>
                 </svg>
-                <span className="text-neutral-700">Expert Faculty with 15+ Years Experience</span>
+                <span className="text-neutral-700">Expert Faculty with 20+ Years Experience</span>
               </li>
               <li className="flex items-center">
                 <svg
@@ -79,8 +79,7 @@ const AboutSection = () => {
               <div className="border-l-4 border-[#ffc107] pl-4">
                 <h4 className="text-lg font-semibold text-neutral-900 mb-2">Proven Track Record</h4>
                 <p className="text-neutral-700">
-                  Consistently producing top rankers in competitive exams with a
-                  success rate of over 95%.
+                  Consistently producing top rankers in competitive exams with over 1000+ students qualified for JEE and NEET.
                 </p>
               </div>
               <div className="border-l-4 border-[#ffc107] pl-4">

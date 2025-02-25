@@ -34,12 +34,12 @@ const TransformSection = () => {
                     <div className="mt-16 animate__animated animate__fadeIn animate__delay-3s">
                         <dl className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-3 lg:px-16">
                             <div className="border-l-4 border-[#ffc107] pl-4">
-                                <dt className="text-base font-semibold leading-7 text-gray-300">Success Rate</dt>
-                                <dd className="text-3xl font-bold leading-9 text-white">95%</dd>
+                                <dt className="text-base font-semibold leading-7 text-gray-300">JEE/NEET qualified</dt>
+                                <dd className="text-3xl font-bold leading-9 text-white">1000+</dd>
                             </div>
                             <div className="border-l-4 border-[#ffc107] pl-4">
                                 <dt className="text-base font-semibold leading-7 text-gray-300">Students Mentored</dt>
-                                <dd className="text-3xl font-bold leading-9 text-white">10000+</dd>
+                                <dd className="text-3xl font-bold leading-9 text-white">5000+</dd>
                             </div>
                             <div className="border-l-4 border-[#ffc107] pl-4">
                                 <dt className="text-base font-semibold leading-7 text-gray-300">Years Experience</dt>

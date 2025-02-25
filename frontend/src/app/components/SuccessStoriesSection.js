@@ -35,15 +35,12 @@ export default function SuccessStories() {
     <section id="success-stories" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-neutral-900 mb-4">Success Stories</h2>
+          <h2 className="text-4xl font-bold text-neutral-900 mb-4">What Our Students Say</h2>
           <div className="h-1 w-20 bg-yellow-400 mx-auto"></div>
         </div>
 
         {/* Testimonial Carousel */}
         <div className="mt-20 bg-neutral-100 rounded-xl p-8">
-          <div className="text-center mb-8">
-            <h3 className="text-2xl font-bold text-neutral-900">What Our Students Say</h3>
-          </div>
           
           <div className="relative overflow-hidden">
             <motion.div
@@ -57,7 +54,7 @@ export default function SuccessStories() {
                     <p className="text-neutral-700 mb-4">"{testimonial.text}"</p>
                     <div className="flex items-center justify-between">
                       <span className="font-semibold text-neutral-900">{testimonial.name}</span>
-                      <span className="text-yellow-400 font-medium">{testimonial.rank}</span>
+                      <span className="text-yellow-400 font-medium">rank</span>
                     </div>
                   </div>
                 </div>

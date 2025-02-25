@@ -72,21 +72,21 @@ const ContactSection = () => {
                   <FaMapMarkerAlt className="h-6 w-6 text-yellow-500" />
                   <div className="ml-4">
                     <p className="text-white font-medium">Address</p>
-                    <p className="text-gray-300">123 Education Street, Learning City, 12345</p>
+                    <p className="text-gray-300">#56 Tower Enclave, Phase - 1, Near Nakodar Road, Jalandhar, 144014</p>
                   </div>
                 </div>
                 <div className="flex items-start">
                   <FaEnvelope className="h-6 w-6 text-yellow-500" />
                   <div className="ml-4">
                     <p className="text-white font-medium">Email</p>
-                    <a href="mailto:info@kumarphysics.com" className="text-gray-300 hover:text-yellow-500">info@kumarphysics.com</a>
+                    <a href="mailto:info@kumarphysics.com" className="text-gray-300 hover:text-yellow-500">email@gmail.com</a>
                   </div>
                 </div>
                 <div className="flex items-start">
                   <FaPhone className="h-6 w-6 text-yellow-500" />
                   <div className="ml-4">
                     <p className="text-white font-medium">Phone</p>
-                    <a href="tel:+1234567890" className="text-gray-300 hover:text-yellow-500">+1 (234) 567-890</a>
+                    <a href="tel:+1234567890" className="text-gray-300 hover:text-yellow-500">+91 9855659866</a>
                   </div>
                 </div>
               </div>
