@@ -8,12 +8,25 @@ const ContactSection = () => {
     name: '',
     email: '',
     phone: '',
-    course: '',
+    courses: [],  // Change from 'course' (string) to 'courses' (array)
     message: '',
   });
 
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleCheckboxChange = (e) => {
+    const { value, checked } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      courses: checked
+        ? [...prev.courses, value]
+        : prev.courses.filter((course) => course !== value),
+    }));
   };
 
   const handleSubmit = (e) => {
@@ -35,28 +48,51 @@ const ContactSection = () => {
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label className="block text-sm font-medium text-gray-300">Full Name</label>
-                <input type="text" name="name" value={formData.name} onChange={handleChange} required className="mt-1 block w-full rounded-md bg-neutral-700 border-transparent focus:border-yellow-500 focus:ring-yellow-500 text-white px-4 py-2" />
+                <input type="text" name="name" value={formData.name} onChange={handleCheckboxChange} required className="mt-1 block w-full rounded-md bg-neutral-700 border-transparent focus:border-yellow-500 focus:ring-yellow-500 text-white px-4 py-2" />
               </div>
               <div>
                 <label className="block text-sm font-medium text-gray-300">Email Address</label>
-                <input type="email" name="email" value={formData.email} onChange={handleChange} required className="mt-1 block w-full rounded-md bg-neutral-700 border-transparent focus:border-yellow-500 focus:ring-yellow-500 text-white px-4 py-2" />
+                <input type="email" name="email" value={formData.email} onChange={handleCheckboxChange} required className="mt-1 block w-full rounded-md bg-neutral-700 border-transparent focus:border-yellow-500 focus:ring-yellow-500 text-white px-4 py-2" />
               </div>
               <div>
                 <label className="block text-sm font-medium text-gray-300">Phone Number</label>
-                <input type="tel" name="phone" value={formData.phone} onChange={handleChange} required className="mt-1 block w-full rounded-md bg-neutral-700 border-transparent focus:border-yellow-500 focus:ring-yellow-500 text-white px-4 py-2" />
+                <input type="tel" name="phone" value={formData.phone} onChange={handleCheckboxChange} required className="mt-1 block w-full rounded-md bg-neutral-700 border-transparent focus:border-yellow-500 focus:ring-yellow-500 text-white px-4 py-2" />
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-300">Interested Course</label>
-                <select name="course" value={formData.course} onChange={handleChange} required className="mt-1 block w-full rounded-md bg-neutral-700 border-transparent focus:border-yellow-500 focus:ring-yellow-500 text-white px-4 py-2">
-                  <option value="">Select a course</option>
-                  <option value="jee">JEE Physics</option>
-                  <option value="neet">NEET Physics</option>
-                  <option value="boards">Board Exams</option>
-                </select>
+                <label className="block text-sm font-medium text-gray-300">Interested Courses</label>
+                <div className="relative">
+                  <button
+                    type="button"
+                    className="mt-1 block w-full rounded-md bg-neutral-700 border-transparent focus:border-yellow-500 focus:ring-yellow-500 text-white px-4 py-2"
+                    onClick={() => setDropdownOpen(!dropdownOpen)}
+                  >
+                    {formData.courses.length > 0 ? formData.courses.join(', ') : 'Select Courses'}
+                  </button>
+
+                  {dropdownOpen && (
+                    <div className="absolute z-10 mt-2 w-full bg-neutral-800 border border-gray-600 rounded-md shadow-lg">
+                      <div className="p-2 space-y-2">
+                        {['JEE Physics', 'NEET Physics', 'Board Exams'].map((course) => (
+                          <label key={course} className="flex items-center space-x-2">
+                            <input
+                              type="checkbox"
+                              value={course}
+                              checked={formData.courses.includes(course)}
+                              onChange={handleCheckboxChange}
+                              className="form-checkbox text-yellow-500"
+                            />
+                            <span className="text-white">{course}</span>
+                          </label>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                </div>
               </div>
+
               <div>
                 <label className="block text-sm font-medium text-gray-300">Message</label>
-                <textarea name="message" rows="4" value={formData.message} onChange={handleChange} className="mt-1 block w-full rounded-md bg-neutral-700 border-transparent focus:border-yellow-500 focus:ring-yellow-500 text-white px-4 py-2"></textarea>
+                <textarea name="message" rows="4" value={formData.message} onChange={handleCheckboxChange} className="mt-1 block w-full rounded-md bg-neutral-700 border-transparent focus:border-yellow-500 focus:ring-yellow-500 text-white px-4 py-2"></textarea>
               </div>
               <button type="submit" className="w-full bg-yellow-500 text-neutral-900 px-6 py-3 rounded-md font-semibold hover:bg-yellow-400 transition-all duration-300">
                 Send Message
@@ -79,7 +115,7 @@ const ContactSection = () => {
                   <FaEnvelope className="h-6 w-6 text-yellow-500" />
                   <div className="ml-4">
                     <p className="text-white font-medium">Email</p>
-                    <a href="mailto:info@kumarphysics.com" className="text-gray-300 hover:text-yellow-500">email@gmail.com</a>
+                    <a href="mailto:info@kumarphysics.com" className="text-gray-300 hover:text-yellow-500">kumbat2211@gmail.com</a>
                   </div>
                 </div>
                 <div className="flex items-start">

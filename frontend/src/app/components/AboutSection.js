@@ -7,7 +7,7 @@ const AboutSection = () => {
         <h2 className="text-4xl font-bold text-neutral-900 mb-4 animate__animated animate__fadeIn">
           About Kumar Physics Classes
         </h2>
-        <div className="h-1 w-20 bg-[#ffc107] mx-auto"></div>
+        <div className="h-1 w-20 bg-[#800000] mx-auto"></div>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -22,7 +22,7 @@ const AboutSection = () => {
             <ul className="space-y-4">
               <li className="flex items-center">
                 <svg
-                  className="w-6 h-6 text-[#ffc107] mr-3"
+                  className="w-6 h-6 text-[#800000] mr-3"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -38,7 +38,7 @@ const AboutSection = () => {
               </li>
               <li className="flex items-center">
                 <svg
-                  className="w-6 h-6 text-[#ffc107] mr-3"
+                  className="w-6 h-6 text-[#800000] mr-3"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -54,7 +54,7 @@ const AboutSection = () => {
               </li>
               <li className="flex items-center">
                 <svg
-                  className="w-6 h-6 text-[#ffc107] mr-3"
+                  className="w-6 h-6 text-[#800000] mr-3"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -76,20 +76,20 @@ const AboutSection = () => {
           <div className="bg-neutral-100 p-8 rounded-lg shadow-lg">
             <h3 className="text-2xl font-bold text-neutral-900 mb-6">Why Choose Us?</h3>
             <div className="space-y-6">
-              <div className="border-l-4 border-[#ffc107] pl-4">
+              <div className="border-l-4 border-[#800000] pl-4">
                 <h4 className="text-lg font-semibold text-neutral-900 mb-2">Proven Track Record</h4>
                 <p className="text-neutral-700">
                   Consistently producing top rankers in competitive exams with over 1000+ students qualified for JEE and NEET.
                 </p>
               </div>
-              <div className="border-l-4 border-[#ffc107] pl-4">
+              <div className="border-l-4 border-[#800000] pl-4">
                 <h4 className="text-lg font-semibold text-neutral-900 mb-2">Interactive Learning</h4>
                 <p className="text-neutral-700">
                   Engaging teaching methods that make complex concepts easy to
                   understand and remember.
                 </p>
               </div>
-              <div className="border-l-4 border-[#ffc107] pl-4">
+              <div className="border-l-4 border-[#800000] pl-4">
                 <h4 className="text-lg font-semibold text-neutral-900 mb-2">Regular Assessment</h4>
                 <p className="text-neutral-700">
                   Frequent tests and detailed performance analysis to track
@@ -104,7 +104,7 @@ const AboutSection = () => {
       <div className="mt-16 text-center animate__animated animate__fadeIn">
         <a
           href="#contact"
-          className="inline-block bg-[#ffc107] text-neutral-900 px-8 py-3 rounded-md font-semibold hover:bg-[#ffcd38] transition-all duration-300"
+          className="inline-block bg-[#800000] text-white px-8 py-3 rounded-md font-semibold hover:bg-[#990000] transition-all duration-300"
         >
           Start Your Journey
         </a>

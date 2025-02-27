@@ -2,20 +2,27 @@
 
 import { motion } from 'framer-motion';
 import { FaChalkboardTeacher, FaClipboardList, FaBookOpen, FaComments, FaHeadset, FaChartLine } from 'react-icons/fa';
+import React from 'react';
 
 const features = [
-  { icon: FaChalkboardTeacher, title: 'Expert Faculty', description: 'Experienced teachers with proven track record in producing top rankers' },
-  { icon: FaClipboardList, title: 'Regular Tests', description: 'Weekly assessments and mock exams to track your progress' },
-  { icon: FaBookOpen, title: 'Study Material', description: 'Comprehensive study notes and practice sheets provided' },
-  { icon: FaComments, title: 'Doubt Sessions', description: 'Regular doubt clearing sessions for personalized attention' },
-  { icon: FaHeadset, title: 'Online Support', description: '24/7 online support for continuous learning' },
-  { icon: FaChartLine, title: 'Performance Tracking', description: 'Detailed analysis and progress reports for each student' }
+  { icon: FaChalkboardTeacher, title: 'Expert Faculty', description: 'Experienced teachers with a proven track record in producing top rankers.' },
+  { icon: FaClipboardList, title: 'Regular Tests', description: 'Weekly assessments and mock exams to track your progress.' },
+  { icon: FaBookOpen, title: 'Study Material', description: 'Comprehensive study notes and practice sheets provided.' },
+  { icon: FaComments, title: 'Doubt Sessions', description: 'Regular doubt-clearing sessions for personalized attention.' },
+  { icon: FaHeadset, title: 'Online Videos', description: 'Pre-recorded lectures and live sessions for flexible learning.' },
+  { icon: FaChartLine, title: 'Performance Tracking', description: 'Detailed analysis and progress reports for each student.' }
 ];
-
 export default function FeaturesSection() {
   return (
     <section id="features" className="py-24 bg-neutral-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        
+        {/* Introduction about Physics */}
+        <h2 className="text-4xl font-bold text-white mb-4">Why Physics is Fascinating?</h2>
+        <p className="text-gray-300 max-w-3xl mx-auto mb-12">
+          Physics is an intriguing subject that provides in-depth insights into the mechanisms of the universe, from matter to radiant energy. It is a subject for intellectuals—when studied with focus, it can lead to significant career advancements and even spiritual satisfaction as one uncovers the mysteries of motion and interaction of objects.
+        </p>
+
         <h2 className="text-4xl font-bold text-white mb-4">Our Features</h2>
         <div className="h-1 w-20 bg-yellow-400 mx-auto mb-12"></div>
 
@@ -29,7 +36,7 @@ export default function FeaturesSection() {
               transition={{ duration: 0.5, delay: index * 0.2 }}
             >
               <div className="h-14 w-14 bg-yellow-400 rounded-lg flex items-center justify-center mb-6">
-                <feature.icon className="w-8 h-8 text-neutral-900" />
+                {React.createElement(feature.icon, { className: "w-8 h-8 text-neutral-900" })}
               </div>
               <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
               <p className="text-gray-300">{feature.description}</p>
@@ -37,11 +44,18 @@ export default function FeaturesSection() {
           ))}
         </div>
 
-        <div className="mt-16">
-          <a href="#contact" className="inline-block bg-yellow-400 text-neutral-900 px-8 py-3 rounded-md font-semibold hover:bg-yellow-500 transition-all duration-300">
-            Explore Our Features
-          </a>
+        {/* What Makes KPC Different? */}
+        <div className="mt-20 text-center">
+          <h2 className="text-4xl font-bold text-white mb-4">What Makes KPC Different?</h2>
+          <p className="text-gray-300 max-w-3xl mx-auto mb-6">
+            Kumar Physics Classes provides comprehensive video lectures with in-depth explanations, effective teaching methodologies, and structured printed notes covering the entire syllabus. Students also receive separate assignments for each topic, ensuring thorough preparation.
+          </p>
+          <a href="#contact" className="inline-block bg-maroon text-white px-8 py-3 rounded-md font-semibold hover:bg-maroon/80 transition-all duration-300">
+  Explore Our Features
+</a>
+
         </div>
+        
       </div>
     </section>
   );
