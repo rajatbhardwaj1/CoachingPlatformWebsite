@@ -25,7 +25,7 @@ const topAchievers = [
 
 const otherAchievers = [
   { name: 'Anil Yadav', image: '/students/anilyadav.jpeg', physicsMarks: '96/100', selection: 'NIT Jalandhar' },
-  { name: 'Kriti Mahajan', image: '/students/kritimahajan.jpeg', physicsMarks: '92/100' },
+  { name: 'Kriti Mahajan', image: '/students/kritimahajan.jpeg', physicsMarks: '92/100', selection:'DAVIET jalandhar' },
   { name: 'Rahul', image: '/students/rahul.jpeg', physicsMarks: '95/100', selection: 'NIT Jalandhar' },
 ];
 

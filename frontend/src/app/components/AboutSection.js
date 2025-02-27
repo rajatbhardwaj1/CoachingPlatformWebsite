@@ -34,7 +34,7 @@ const AboutSection = () => {
                     d="M5 13l4 4L19 7"
                   ></path>
                 </svg>
-                <span className="text-neutral-700">Expert Faculty with 20+ Years Experience</span>
+                <span className="text-neutral-700">Expert Faculty with 25+ Years Experience</span>
               </li>
               <li className="flex items-center">
                 <svg

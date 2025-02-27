@@ -10,6 +10,7 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        maroon: "#800000", // Define maroon manually
       },
     },
   },
