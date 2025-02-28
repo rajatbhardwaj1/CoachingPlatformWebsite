@@ -11,10 +11,10 @@ const HeroSection = () => {
           Empowering students to achieve excellence in Physics through innovative teaching methods and personalized attention.
         </p>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-          <span className="px-6 py-2 bg-gray-700 rounded-lg text-white font-medium text-2xl">JEE</span>
-          <span className="px-6 py-2 bg-gray-700 rounded-lg text-white font-medium text-2xl">NEET</span>
-          <span className="px-6 py-2 bg-gray-700 rounded-lg text-white font-medium text-2xl">11th & 12th</span>
-          <span className="px-6 py-2 bg-gray-700 rounded-lg text-white font-medium text-2xl">9th & 10th</span>
+          <span className="flex items-center justify-center px-6 py-2 bg-gray-700 rounded-lg text-white font-medium text-2xl">JEE</span>
+          <span className="flex items-center justify-center px-6 py-2 bg-gray-700 rounded-lg text-white font-medium text-2xl">NEET</span>
+          <span className="flex items-center justify-center px-6 py-2 bg-gray-700 rounded-lg text-white font-medium text-2xl">11th & 12th</span>
+          <span className="flex items-center justify-center px-6 py-2 bg-gray-700 rounded-lg text-white font-medium text-xl">9th & 10th (Science & Math)</span>
         </div>
 
         <p className="text-base md:text-lg text-gray-300 mb-8 max-w-3xl mx-auto">

@@ -33,7 +33,7 @@ const otherAchievers = [
 
 // Teacher's Pictures
 const teacherImages = [
-  { name: 'Er. Kumar Bharti', image: '/images/kumarbharti-1.png', description: 'Our Esteemed Mentor' },
+  { name: 'Er. Kumar Bharti', image: '/images/kumarbharti-1.png', description: 'Our Esteemed Educator' },
   { name: 'With Students', image: '/images/withstudents.jpeg', description: 'Guiding Future Achievers' },
 ];
 
@@ -105,7 +105,7 @@ const AchievementSection = () => {
         {/* Teacher's Images Section */}
         <div className="mt-16 text-center">
           <motion.h3 className="text-3xl font-bold text-white mb-12" animate={{ opacity: 1 }}>
-            Meet Our Mentor
+            Meet Our Educator
           </motion.h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {teacherImages.map((teacher, index) => (

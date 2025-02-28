@@ -103,12 +103,14 @@ const ContactSection = () => {
           <div className="space-y-8">
             <div className="bg-neutral-800 p-8 rounded-lg shadow-lg">
               <h3 className="text-2xl font-bold text-white mb-6">Get in Touch</h3>
+              <p className="text-gray-300 mb-4 font-bold text-lg">Er. Kumar Bharti</p>
+
               <div className="space-y-6">
                 <div className="flex items-start">
                   <FaMapMarkerAlt className="h-6 w-6 text-yellow-500" />
                   <div className="ml-4">
                     <p className="text-white font-medium">Address</p>
-                    <p className="text-gray-300">#56 Tower Enclave, Phase - 1, Near Nakodar Road, Jalandhar, 144014</p>
+                    <p className="text-gray-300">#56 Tower Enclave, Phase - 1, Near Wadala Chowk, Jalandhar, 144014</p>
                   </div>
                 </div>
                 <div className="flex items-start">
