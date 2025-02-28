@@ -2,109 +2,54 @@ import React from "react";
 
 const AboutSection = () => {
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-16">
-      <div className="text-center mb-16">
-        <h2 className="text-4xl font-bold text-neutral-900 mb-4 animate__animated animate__fadeIn">
+    <div className="bg-gray-100 text-black py-24 px-6">
+      <div className="max-w-7xl mx-auto text-center mb-16">
+        <h2 className="text-4xl font-bold text-black mb-4 animate__animated animate__fadeIn">
           About Kumar Physics Classes
         </h2>
-        <div className="h-1 w-20 bg-[#800000] mx-auto"></div>
+        <div className="h-1 w-20 bg-yellow-500 mx-auto"></div>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-        <div className="animate__animated animate__fadeInLeft">
-          <div className="bg-neutral-100 p-8 rounded-lg shadow-lg">
-            <h3 className="text-2xl font-bold text-neutral-900 mb-6">Our Mission</h3>
-            <p className="text-neutral-700 mb-6">
-              At Kumar Physics Classes, we are dedicated to providing exceptional
-              physics education that empowers students to excel in competitive
-              examinations and build strong foundational knowledge.
-            </p>
-            <ul className="space-y-4">
-              <li className="flex items-center">
-                <svg
-                  className="w-6 h-6 text-[#800000] mr-3"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M5 13l4 4L19 7"
-                  ></path>
-                </svg>
-                <span className="text-neutral-700">Expert Faculty with 25+ Years Experience</span>
-              </li>
-              <li className="flex items-center">
-                <svg
-                  className="w-6 h-6 text-[#800000] mr-3"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M5 13l4 4L19 7"
-                  ></path>
-                </svg>
-                <span className="text-neutral-700">Personalized Attention to Every Student</span>
-              </li>
-              <li className="flex items-center">
-                <svg
-                  className="w-6 h-6 text-[#800000] mr-3"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M5 13l4 4L19 7"
-                  ></path>
-                </svg>
-                <span className="text-neutral-700">Comprehensive Study Material</span>
-              </li>
-            </ul>
-          </div>
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+        <div className="animate__animated animate__fadeInLeft bg-gray-200 p-8 rounded-lg shadow-lg">
+          <h3 className="text-2xl font-bold text-black mb-6">Our Mission</h3>
+          <p className="text-gray-700 mb-6">
+            At Kumar Physics Classes, we are dedicated to providing exceptional education. Students are taught as well as guided to make them aware of various career opportunities to generate toughness and confidence in them.
+          </p>
         </div>
 
-        <div className="animate__animated animate__fadeInRight">
-          <div className="bg-neutral-100 p-8 rounded-lg shadow-lg">
-            <h3 className="text-2xl font-bold text-neutral-900 mb-6">Why Choose Us?</h3>
-            <div className="space-y-6">
-              <div className="border-l-4 border-[#800000] pl-4">
-                <h4 className="text-lg font-semibold text-neutral-900 mb-2">Proven Track Record</h4>
-                <p className="text-neutral-700">
-                  Consistently producing top rankers in competitive exams with over 1000+ students qualified for JEE and NEET.
-                </p>
-              </div>
-              <div className="border-l-4 border-[#800000] pl-4">
-                <h4 className="text-lg font-semibold text-neutral-900 mb-2">Interactive Learning</h4>
-                <p className="text-neutral-700">
-                  Engaging teaching methods that make complex concepts easy to
-                  understand and remember.
-                </p>
-              </div>
-              <div className="border-l-4 border-[#800000] pl-4">
-                <h4 className="text-lg font-semibold text-neutral-900 mb-2">Regular Assessment</h4>
-                <p className="text-neutral-700">
-                  Frequent tests and detailed performance analysis to track
-                  progress and improve weaknesses.
-                </p>
-              </div>
-            </div>
-          </div>
+        <div className="animate__animated animate__fadeInRight bg-gray-200 p-8 rounded-lg shadow-lg">
+          <h3 className="text-2xl font-bold text-black mb-6">Why Choose Us?</h3>
+          <ul className="space-y-4 text-gray-700">
+            <li className="flex items-start">
+              <span className="text-yellow-500 font-bold mr-2">•</span> Expert faculty with 25 years of experience
+            </li>
+            <li className="flex items-start">
+              <span className="text-yellow-500 font-bold mr-2">•</span> Personalized attention to every student
+            </li>
+            <li className="flex items-start">
+              <span className="text-yellow-500 font-bold mr-2">•</span> Comprehensive study material
+            </li>
+            <li className="flex items-start">
+              <span className="text-yellow-500 font-bold mr-2">•</span> Recorded video lectures
+            </li>
+            <li className="flex items-start">
+              <span className="text-yellow-500 font-bold mr-2">•</span> Regular evaluation through frequent tests
+            </li>
+            <li className="flex items-start">
+              <span className="text-yellow-500 font-bold mr-2">•</span> Special attention to numerical problems
+            </li>
+            <li className="flex items-start">
+              <span className="text-yellow-500 font-bold mr-2">•</span> MCQs practice for Board class students
+            </li>
+          </ul>
         </div>
       </div>
 
       <div className="mt-16 text-center animate__animated animate__fadeIn">
         <a
           href="#contact"
-          className="inline-block bg-[#800000] text-white px-8 py-3 rounded-md font-semibold hover:bg-[#990000] transition-all duration-300"
+          className="inline-block bg-yellow-500 text-black px-8 py-3 rounded-md font-semibold hover:bg-yellow-600 transition-all duration-300"
         >
           Start Your Journey
         </a>

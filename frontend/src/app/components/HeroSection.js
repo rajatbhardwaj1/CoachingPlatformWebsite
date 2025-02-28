@@ -2,69 +2,33 @@ import React from "react";
 
 const HeroSection = () => {
   return (
-    <div className="relative min-h-[50vh] md:min-h-[60vh] flex items-center bg-black">
-
-      {/* Background Image with Left-Side Gradient */}
-      <div
-  className="absolute inset-0 w-full h-full bg-no-repeat bg-cover md:bg-contain gradient-bg"
-  style={{
-    backgroundImage: "linear-gradient(to right, black 5%, transparent 100%), url('/images/teaching-landscape.png')",
-    backgroundPosition: "left center",
-    backgroundSize: "cover",
-    backgroundPositionY: "30%", // Adjust this value to move the image down
-  }}
-></div>
-
-
-
-      {/* Overlay for Mobile */}
-      <div className="absolute inset-0 bg-black/10 md:bg-transparent"></div>
-
-      {/* <style>
-        {`
-          @media (max-width: 1600px) {
-            .gradient-bg {
-              background-image: linear-gradient(to right, black 40%, transparent 100%), url('/images/teaching-landscape.png') !important;
-            }
-          }
-          @media (max-width: 1400px) {
-            .gradient-bg {
-              background-image: linear-gradient(to right, black 30%, transparent 100%), url('/images/teaching-landscape.png') !important;
-            }
-          }
-          @media (max-width: 1200px) {
-            .gradient-bg {
-              background-image: linear-gradient(to right, black 20%, transparent 100%), url('/images/teaching-landscape.png') !important;
-            }
-          }
-          @media (max-width: 1000px) {
-            .gradient-bg {
-              background-image: linear-gradient(to right, black 10%, transparent 80%), url('/images/teaching-landscape.png') !important;
-            }
-          }
-        `}
-      </style> */}
-
-      {/* Content */}
-      <div className="relative z-20 w-full text-center max-w-7xl mx-auto px-6 sm:px-10 lg:px-12 py-12 md:py-20">
-        <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white animate__animated animate__fadeIn">
-          <span className="block">Welcome to</span>
-          <span className="block text-maroon">Kumar Physics Classes</span>
-          <span className="block text-yellow-500">Excellence in Physics Education</span>
+    <div className="relative flex flex-col items-center justify-center text-center text-white min-h-[75vh] bg-[#151515] p-6">
+      <div className="relative z-10 max-w-4xl w-full px-4 py-12 md:py-16">
+        <h1 className="text-4xl md:text-6xl font-bold mb-4 text-gray-100">
+          Kumar Physics Classes
         </h1>
-        <p className="mt-3 max-w-md mx-auto text-sm text-gray-300 sm:text-base md:mt-5 md:text-lg md:max-w-3xl animate__animated animate__fadeIn animate__delay-1s">
-          Empowering students to achieve their dreams through quality physics education
+        <p className="text-lg md:text-xl text-gray-300 mb-6 max-w-3xl mx-auto">
+          Empowering students to achieve excellence in Physics through innovative teaching methods and personalized attention.
         </p>
-        <div className="mt-5 flex justify-center animate__animated animate__fadeIn animate__delay-2s">
-          <a
-            href="#contact"
-            className="px-6 py-2 md:px-8 md:py-3 text-sm md:text-base font-medium rounded-md text-white bg-maroon hover:bg-maroon/80 transition-all"
-          >
-            Join Now
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+          <span className="px-6 py-2 bg-gray-700 rounded-lg text-white font-medium text-2xl">JEE</span>
+          <span className="px-6 py-2 bg-gray-700 rounded-lg text-white font-medium text-2xl">NEET</span>
+          <span className="px-6 py-2 bg-gray-700 rounded-lg text-white font-medium text-2xl">11th & 12th</span>
+          <span className="px-6 py-2 bg-gray-700 rounded-lg text-white font-medium text-2xl">9th & 10th</span>
+        </div>
+
+        <p className="text-base md:text-lg text-gray-300 mb-8 max-w-3xl mx-auto">
+          Join Kumar Physics classes to unlock your potential and achieve excellence in competitive and board exams with our expert guidance.
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="#contact" className="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-3 px-6 rounded-lg transition duration-300">
+            Enroll Now
+          </a>
+          <a href="#about" className="border border-gray-600 hover:bg-gray-800 text-white font-bold py-3 px-6 rounded-lg transition duration-300">
+            Explore Courses
           </a>
         </div>
       </div>
-
     </div>
   );
 };

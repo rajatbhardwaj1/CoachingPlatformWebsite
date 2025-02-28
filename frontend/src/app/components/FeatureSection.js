@@ -16,20 +16,16 @@ export default function FeaturesSection() {
   return (
     <section id="features" className="py-24 bg-neutral-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        
-        {/* Introduction about Physics */}
-        <h2 className="text-4xl font-bold text-white mb-4">Why Physics is Fascinating?</h2>
-        <p className="text-gray-300 max-w-3xl mx-auto mb-12">
-          Physics is an intriguing subject that provides in-depth insights into the mechanisms of the universe, from matter to radiant energy. It is a subject for intellectuals—when studied with focus, it can lead to significant career advancements and even spiritual satisfaction as one uncovers the mysteries of motion and interaction of objects.
-        </p>
+
+       
 
         <h2 className="text-4xl font-bold text-white mb-4">Our Features</h2>
         <div className="h-1 w-20 bg-yellow-400 mx-auto mb-12"></div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
-            <motion.div 
-              key={index} 
+            <motion.div
+              key={index}
               className="bg-neutral-800 rounded-lg p-6 transform hover:scale-105 transition-transform duration-300"
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
@@ -44,18 +40,8 @@ export default function FeaturesSection() {
           ))}
         </div>
 
-        {/* What Makes KPC Different? */}
-        <div className="mt-20 text-center">
-          <h2 className="text-4xl font-bold text-white mb-4">What Makes KPC Different?</h2>
-          <p className="text-gray-300 max-w-3xl mx-auto mb-6">
-            Kumar Physics Classes provides comprehensive video lectures with in-depth explanations, effective teaching methodologies, and structured printed notes covering the entire syllabus. Students also receive separate assignments for each topic, ensuring thorough preparation.
-          </p>
-          <a href="#contact" className="inline-block bg-maroon text-white px-8 py-3 rounded-md font-semibold hover:bg-maroon/80 transition-all duration-300">
-  Explore Our Features
-</a>
 
-        </div>
-        
+
       </div>
     </section>
   );
