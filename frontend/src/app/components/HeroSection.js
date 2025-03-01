@@ -13,8 +13,15 @@ const HeroSection = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
           <span className="flex items-center justify-center px-6 py-2 bg-gray-700 rounded-lg text-white font-medium text-2xl">JEE</span>
           <span className="flex items-center justify-center px-6 py-2 bg-gray-700 rounded-lg text-white font-medium text-2xl">NEET</span>
-          <span className="flex items-center justify-center px-6 py-2 bg-gray-700 rounded-lg text-white font-medium text-2xl">11th & 12th</span>
-          <span className="flex items-center justify-center px-6 py-2 bg-gray-700 rounded-lg text-white font-medium text-xl">9th & 10th (Science & Math)</span>
+          <span className="flex flex-col items-center justify-center px-6 py-2 bg-gray-700 rounded-lg text-white font-medium text-xl text-center">
+            11th & 12th
+          </span>
+          <span className="flex flex-col items-center justify-center px-6 py-2 bg-gray-700 rounded-lg text-white font-medium text-xl text-center">
+            9th & 10th
+            <span className="text-sm">Science & Math</span>
+          </span>
+
+
         </div>
 
         <p className="text-base md:text-lg text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -24,9 +31,6 @@ const HeroSection = () => {
           <a href="#contact" className="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-3 px-6 rounded-lg transition duration-300">
             Enroll Now
           </a>
-          {/* <a href="#about" className="border border-gray-600 hover:bg-gray-800 text-white font-bold py-3 px-6 rounded-lg transition duration-300">
-            Explore Courses
-          </a> */}
         </div>
       </div>
     </div>

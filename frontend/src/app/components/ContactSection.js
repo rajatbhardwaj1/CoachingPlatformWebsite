@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { motion, AnimatePresence } from "framer-motion";
 import { FaMapMarkerAlt, FaEnvelope, FaPhone } from 'react-icons/fa';
 
 const ContactSection = () => {
@@ -8,7 +9,7 @@ const ContactSection = () => {
     name: '',
     email: '',
     phone: '',
-    courses: [],  // Change from 'course' (string) to 'courses' (array)
+    courses: [],
     message: '',
   });
 
@@ -32,7 +33,7 @@ const ContactSection = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     alert('Thank you for your message. We will get back to you soon!');
-    setFormData({ name: '', email: '', phone: '', course: '', message: '' });
+    setFormData({ name: '', email: '', phone: '', courses: [], message: '' });
   };
 
   return (
@@ -48,51 +49,62 @@ const ContactSection = () => {
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label className="block text-sm font-medium text-gray-300">Full Name</label>
-                <input type="text" name="name" value={formData.name} onChange={handleCheckboxChange} required className="mt-1 block w-full rounded-md bg-neutral-700 border-transparent focus:border-yellow-500 focus:ring-yellow-500 text-white px-4 py-2" />
+                <input type="text" name="name" value={formData.name} onChange={handleChange} required className="mt-1 block w-full rounded-md bg-neutral-700 border-transparent focus:border-yellow-500 focus:ring-yellow-500 text-white px-4 py-2" />
               </div>
               <div>
                 <label className="block text-sm font-medium text-gray-300">Email Address</label>
-                <input type="email" name="email" value={formData.email} onChange={handleCheckboxChange} required className="mt-1 block w-full rounded-md bg-neutral-700 border-transparent focus:border-yellow-500 focus:ring-yellow-500 text-white px-4 py-2" />
+                <input type="email" name="email" value={formData.email} onChange={handleChange} required className="mt-1 block w-full rounded-md bg-neutral-700 border-transparent focus:border-yellow-500 focus:ring-yellow-500 text-white px-4 py-2" />
               </div>
               <div>
                 <label className="block text-sm font-medium text-gray-300">Phone Number</label>
-                <input type="tel" name="phone" value={formData.phone} onChange={handleCheckboxChange} required className="mt-1 block w-full rounded-md bg-neutral-700 border-transparent focus:border-yellow-500 focus:ring-yellow-500 text-white px-4 py-2" />
+                <input type="tel" name="phone" value={formData.phone} onChange={handleChange} required className="mt-1 block w-full rounded-md bg-neutral-700 border-transparent focus:border-yellow-500 focus:ring-yellow-500 text-white px-4 py-2" />
               </div>
               <div>
                 <label className="block text-sm font-medium text-gray-300">Interested Courses</label>
                 <div className="relative">
                   <button
                     type="button"
-                    className="mt-1 block w-full rounded-md bg-neutral-700 border-transparent focus:border-yellow-500 focus:ring-yellow-500 text-white px-4 py-2"
+                    className="mt-1 block w-full rounded-md bg-neutral-700 border-transparent focus:border-yellow-500 focus:ring-yellow-500 text-white px-4 py-2 flex justify-between items-center"
                     onClick={() => setDropdownOpen(!dropdownOpen)}
                   >
                     {formData.courses.length > 0 ? formData.courses.join(', ') : 'Select Courses'}
+                    <span className={`transform transition-transform duration-300 ${dropdownOpen ? 'rotate-180' : ''}`}>
+                      ▼
+                    </span>
                   </button>
 
-                  {dropdownOpen && (
-                    <div className="absolute z-10 mt-2 w-full bg-neutral-800 border border-gray-600 rounded-md shadow-lg">
-                      <div className="p-2 space-y-2">
-                        {['JEE Physics', 'NEET Physics', 'Board Exams'].map((course) => (
-                          <label key={course} className="flex items-center space-x-2">
-                            <input
-                              type="checkbox"
-                              value={course}
-                              checked={formData.courses.includes(course)}
-                              onChange={handleCheckboxChange}
-                              className="form-checkbox text-yellow-500"
-                            />
-                            <span className="text-white">{course}</span>
-                          </label>
-                        ))}
-                      </div>
-                    </div>
-                  )}
+                  <AnimatePresence>
+                    {dropdownOpen && (
+                      <motion.div
+                        initial={{ opacity: 0, y: -10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -10 }}
+                        transition={{ duration: 0.3 }}
+                        className="absolute z-10 mt-2 w-full bg-neutral-800 border border-gray-600 rounded-md shadow-lg overflow-hidden"
+                      >
+                        <div className="p-3 space-y-2">
+                          {['JEE Physics', 'NEET Physics', 'Board Exams'].map((course) => (
+                            <label key={course} className="flex items-center space-x-2 cursor-pointer hover:bg-gray-700 p-2 rounded-md transition-all">
+                              <input
+                                type="checkbox"
+                                value={course}
+                                checked={formData.courses.includes(course)}
+                                onChange={handleCheckboxChange}
+                                className="form-checkbox text-yellow-500"
+                              />
+                              <span className="text-white">{course}</span>
+                            </label>
+                          ))}
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
                 </div>
               </div>
 
               <div>
                 <label className="block text-sm font-medium text-gray-300">Message</label>
-                <textarea name="message" rows="4" value={formData.message} onChange={handleCheckboxChange} className="mt-1 block w-full rounded-md bg-neutral-700 border-transparent focus:border-yellow-500 focus:ring-yellow-500 text-white px-4 py-2"></textarea>
+                <textarea name="message" rows="4" value={formData.message} onChange={handleChange} className="mt-1 block w-full rounded-md bg-neutral-700 border-transparent focus:border-yellow-500 focus:ring-yellow-500 text-white px-4 py-2"></textarea>
               </div>
               <button type="submit" className="w-full bg-yellow-500 text-neutral-900 px-6 py-3 rounded-md font-semibold hover:bg-yellow-400 transition-all duration-300">
                 Send Message
@@ -124,12 +136,11 @@ const ContactSection = () => {
                   <FaPhone className="h-6 w-6 text-yellow-500" />
                   <div className="ml-4">
                     <p className="text-white font-medium">Phone</p>
-                    <a href="tel:+1234567890" className="text-gray-300 hover:text-yellow-500">+91 9855659866</a>
+                    <a href="tel:+91 9855659866" className="text-gray-300 hover:text-yellow-500">+91 9855659866</a>
                   </div>
                 </div>
               </div>
             </div>
-            
           </div>
         </div>
       </div>
@@ -138,7 +149,3 @@ const ContactSection = () => {
 };
 
 export default ContactSection;
-
-
-
-
