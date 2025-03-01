@@ -14,7 +14,7 @@ const AboutSection = () => {
         <div className="animate__animated animate__fadeInLeft bg-gray-200 p-8 rounded-lg shadow-lg">
           <h3 className="text-2xl font-bold text-black mb-6">Our Mission</h3>
           <p className="text-gray-700 mb-6">
-            At Kumar Physics Classes, we are dedicated to providing exceptional education. Students are taught as well as guided to make them aware of various career opportunities to generate toughness and confidence in them.
+            At Kumar Physics Classes, we are dedicated for providing exceptional education. Students are taught as well as guided to make them aware of various career opportunities to generate toughness and confidence in them.
           </p>
         </div>
 

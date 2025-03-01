@@ -24,9 +24,9 @@ const HeroSection = () => {
           <a href="#contact" className="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-3 px-6 rounded-lg transition duration-300">
             Enroll Now
           </a>
-          <a href="#about" className="border border-gray-600 hover:bg-gray-800 text-white font-bold py-3 px-6 rounded-lg transition duration-300">
+          {/* <a href="#about" className="border border-gray-600 hover:bg-gray-800 text-white font-bold py-3 px-6 rounded-lg transition duration-300">
             Explore Courses
-          </a>
+          </a> */}
         </div>
       </div>
     </div>

@@ -20,11 +20,11 @@ const TransformSection = () => {
                     <dl className="flex flex-wrap justify-center gap-x-12 text-center">
                         <div className="border-l-4 border-yellow-500 pl-4">
                             <dt className="text-lg font-semibold text-gray-700">JEE/NEET Qualified</dt>
-                            <dd className="text-3xl font-bold text-black">250+</dd>
+                            <dd className="text-3xl font-bold text-black">500+</dd>
                         </div>
                         <div className="border-l-4 border-yellow-500 pl-4">
-                            <dt className="text-lg font-semibold text-gray-700">Students Educator</dt>
-                            <dd className="text-3xl font-bold text-black">1000+</dd>
+                            <dt className="text-lg font-semibold text-gray-700">Students Educated</dt>
+                            <dd className="text-3xl font-bold text-black">2500+</dd>
                         </div>
                         <div className="border-l-4 border-yellow-500 pl-4">
                             <dt className="text-lg font-semibold text-gray-700">Years Experience</dt>
