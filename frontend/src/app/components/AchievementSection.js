@@ -43,7 +43,7 @@ const AchievementSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <motion.h2 className="text-4xl font-bold text-white mb-4" animate={{ opacity: 1 }}>
-            Our Achievements
+            Our Recent Achievements
           </motion.h2>
           <div className="h-1 w-20 bg-yellow-500 mx-auto"></div>
         </div>
@@ -76,9 +76,7 @@ const AchievementSection = () => {
 
         {/* Other Achievers */}
         <div className="mt-16 text-center">
-          <motion.h3 className="text-3xl font-bold text-white mb-12" animate={{ opacity: 1 }}>
-            Other High Achievers
-          </motion.h3>
+          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {otherAchievers.map((achiever, index) => (
               <motion.div
