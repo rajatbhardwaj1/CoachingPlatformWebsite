@@ -64,7 +64,6 @@ const HeroSection = () => {
 
   return (
     <div className="relative flex flex-col items-center justify-center text-center text-white min-h-[75vh] bg-[#151515] p-6 overflow-hidden">
-      <canvas ref={canvasRef} className="absolute top-0 left-0 w-full h-full opacity-50"></canvas>
       <div className="relative z-10 max-w-4xl w-full px-4 py-12 md:py-16">
         <h1 className="text-4xl md:text-6xl font-bold mb-4 text-gray-100">
           Kumar Physics Classes
