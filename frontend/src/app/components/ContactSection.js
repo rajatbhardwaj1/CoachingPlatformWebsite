@@ -14,6 +14,8 @@ const ContactSection = () => {
   });
 
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [statusMessage, setStatusMessage] = useState('');
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -30,10 +32,37 @@ const ContactSection = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+const handleSubmit = async (e) => {
     e.preventDefault();
-    alert('Thank you for your message. We will get back to you soon!');
-    setFormData({ name: '', email: '', phone: '', courses: [], message: '' });
+    setLoading(true);
+    setStatusMessage('');
+
+    const message = `New Contact Form Submission:\n\n` +
+      `Name: ${formData.name}\n` +
+      `Email: ${formData.email}\n` +
+      `Phone: ${formData.phone}\n` +
+      `Courses: ${formData.courses.join(', ')}\n` +
+      `Message: ${formData.message}`;
+
+    try {
+      const response = await fetch(`https://api.telegram.org/bot7874603990:AAEw4N-j2DXMq0B2uQCvD9G4EyD2edyzmmI/sendMessage`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ chat_id: 1129658311, text: message }),
+      });
+
+      const data = await response.json();
+      if (data.ok) {
+        setStatusMessage('✅ Message sent successfully!');
+        setFormData({ name: '', email: '', phone: '', courses: [], message: '' });
+      } else {
+        throw new Error('Failed to send message to Telegram');
+      }
+    } catch (error) {
+      setStatusMessage(`❌ Error: ${error.message}`);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -107,8 +136,9 @@ const ContactSection = () => {
                 <textarea name="message" rows="4" value={formData.message} onChange={handleChange} className="mt-1 block w-full rounded-md bg-neutral-700 border-transparent focus:border-yellow-500 focus:ring-yellow-500 text-white px-4 py-2"></textarea>
               </div>
               <button type="submit" className="w-full bg-yellow-500 text-neutral-900 px-6 py-3 rounded-md font-semibold hover:bg-yellow-400 transition-all duration-300">
-                Send Message
+                {loading ? 'Sending...' : 'Send Message'}
               </button>
+              {statusMessage && <p className="text-center text-white mt-4">{statusMessage}</p>}
             </form>
           </div>
 
