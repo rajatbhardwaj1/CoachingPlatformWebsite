@@ -14,7 +14,7 @@ export default function Home() {
       <TransformSection />
       <AboutPhysics/>
       <AboutSection />
-      <FacultySection/>
+      {/* <FacultySection/> */}
       <AchievementsSection />
       <FeaturesSection/>
       <ContactSection/>
