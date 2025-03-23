@@ -14,6 +14,9 @@ const geistMono = Geist_Mono({
 export const metadata = {
   title: "Kumar Physics Classes",
   description: "Kumar Physics Classes",
+  other: {
+    "google-site-verification": "dFhq7XS_g-rkv-FwuKkCr2yXYXMip-xKqrFrj7AI4_4",
+  },
 };
 
 export default function RootLayout({ children }) {
